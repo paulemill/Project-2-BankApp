@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+
+    <button id="darkModeToggle">Toggle Dark Mode</button>
+    
+    <div class="login_screen">
+      <h1>Bank App</h1>
+      <form id="login_form">
+        <div class="form_group">
+          <label for="user_name">Username</label>
+          <input type="text" placeholder="Username" id="user_name" required/>
+        </div>
+        <div class="form_group">
+          <label for="pass_word">Password</label>
+          <input type="password" placeholder="Password" id="pass_word" required/>
+        </div>
+        <button type="submit" id="login">Login</button>
+        <div class="tooltip">Hint
+          <span class="tooltiptext">User 1: Paul Macalaguim > 1111<br><br>User 2: Jane Doe > 2222</span>
+        </div>
+      </form>
+    </div>
+
+    <div class="content_all">
+      <div class="content">
+        <div class="content_header">
+          <h1>Bank App</h1>
+        </div>
+
+        <div class="content_body">
+          <div class="content_body_info">
+            <h2>Account Balance</h2>
+            <h3 id="balance">PHP 0</h3>
+
+            <div class="summary">
+              <p class="summary__label">In</p>
+              <p class="summary__value summary__value--in"></p>
+              <p class="summary__label">Out</p>
+              <p class="summary__value summary__value--out"></p>
+            </div>
+
+            <input type="number" id="amount" placeholder="Enter Amount" />
+            <div class="btns">
+              <button id="deposit">Deposit</button>
+              <button id="withdraw">Withdraw</button>
+            </div>
+          </div>
+
+          <div class="content_body_history">
+            <h2>Transaction History</h2>
+
+            <div class="movements">
+              <div class="movements__row">
+                <div class="movements__type movements__type--deposit"></div>
+                <div class="movements__value"></div>
+              </div>
+              </div>
+            </div>
+
+            <button class="btn--sort">&downarrow; SORT</button>
+          </div>
+          <button id="logout">Logout</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
